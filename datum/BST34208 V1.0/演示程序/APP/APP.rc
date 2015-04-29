@@ -1,0 +1,281 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\APP.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 257, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于BST34208"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,8,34,20,20
+    LTEXT           "BST34208 1.0 版",IDC_STATIC,40,14,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2011北京神州飞航科技有限责任公司",
+                    IDC_STATIC,40,29,197,8
+    GROUPBOX        "版本信息",IDC_STATIC,40,46,210,37
+    LTEXT           "硬件版本:1.0   驱动版本:1.0   接口库版本:1.0",
+                    IDC_STATIC_DEVINFO,47,65,197,8
+END
+
+IDD_APP_DIALOG DIALOGEX 0, 0, 433, 326
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BST34208"
+MENU IDR_MENU1
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LIST_DO,"SysListView32",LVS_REPORT | 
+                    LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,7,5,202,292
+    PUSHBUTTON      "输  出",IDC_BTN_OUTPUT,65,302,59,17
+    CONTROL         "List1",IDC_LIST_DI,"SysListView32",LVS_REPORT | 
+                    LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,224,5,202,292
+    PUSHBUTTON      "输  入",IDC_BTN_INPUT,253,302,59,17
+    PUSHBUTTON      "停止输入",IDC_BTN_INPUT_STOP,337,302,59,17
+END
+
+IDD_DIALOG_CARDID DIALOG DISCARDABLE  0, 0, 139, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "板卡号选择"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,11,28,50,14
+    PUSHBUTTON      "取消",IDCANCEL,67,28,50,14
+    LTEXT           "板卡号：",IDC_STATIC,13,9,31,8
+    EDITTEXT        IDC_EDIT_CARDID,48,7,46,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "(0~7)",IDC_STATIC,99,9,21,8
+END
+
+IDD_DIALOG_LOGO DIALOG DISCARDABLE  0, 0, 340, 220
+STYLE WS_POPUP
+FONT 9, "宋体"
+BEGIN
+    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP,0,0,344,237
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Beijing Senfetech Corporation\0"
+            VALUE "FileDescription", "APP Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 0\0"
+            VALUE "InternalName", "APP\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2011北京神州飞航科技有限责任公司\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "APP.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "BST34208-APP 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_APP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 426
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 319
+    END
+
+    IDD_DIALOG_CARDID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "输出状态选择"
+    BEGIN
+        POPUP "全部为电源/电源断"
+        BEGIN
+            MENUITEM "电源",                        IDM_TYPE_DOA1
+            MENUITEM "电源断",                      IDM_TYPE_DOA2
+        END
+        POPUP "全部为电源地/电源地断"
+        BEGIN
+            MENUITEM "电源地",                      IDM_TYPE_DOB1
+            MENUITEM "电源地断",                    IDM_TYPE_DOB2
+        END
+    END
+    POPUP "输入类型选择"
+    BEGIN
+        MENUITEM "全部为电源/电源断",           IDM_TYPE_DIA
+        MENUITEM "全部为电源地/电源地断",       IDM_TYPE_DIB
+    END
+    MENUITEM "关于",                        IDM_VERSION
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_INIT         BITMAP  DISCARDABLE     "res\\Introduce.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 APP(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\APP.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,6 @@
+--PC机首先安装光盘内的Windriver软件，执行WD603.EXE，SN号在文件夹内；
+将PC_ES卡放入PC机箱后，使用Windriver生成PC_ES模块的驱动函数，过程如下：
+1. 打开Windriver，选择Create a new driver project；
+2. 在出现的列表中选择PCI: PLX PCI 9054...，点击Generate .INF file；
+3. 在出现的对话框中选择next，并保存生成文件，如pc_es.inf；
+4. 根据windows提示的新硬件安装，选择生成的pc_es.inf文件，完成安装。

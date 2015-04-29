@@ -1,0 +1,548 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Dialg.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Dialg.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 AEC429-CPCI/PCI-S6"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "AEC429-CPCI/PCI-S6 1.0 版",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 2007 北京神州飞航科技有限责任公司",IDC_STATIC,
+                    40,29,188,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIALG_DIALOG DIALOGEX 0, 0, 468, 259
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+MENU IDR_MENU1
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "添加数据",IDC_BUTTON_ADD,248,52,53,22
+    PUSHBUTTON      "删除数据",IDC_BUTTON_DELE,248,76,53,22
+    PUSHBUTTON      "清空数据",IDC_BUTTON_CLEA,248,100,53,22
+    PUSHBUTTON      "加载数据文件",IDC_BUTTON_LOAD,248,136,53,22
+    PUSHBUTTON      "保存数据文件",IDC_BUTTON_LOAD2,248,160,53,22
+    EDITTEXT        IDC_EDIT_SendData,300,31,47,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "发送",IDC_BUTTON_TX,278,223,64,22
+    EDITTEXT        IDC_EDIT_TXNUM,346,186,40,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Tab1",IDC_TAB_REV,"SysTabControl32",TCS_MULTILINE,0,5,
+                    156,25
+    PUSHBUTTON      "开始接收",IDC_BUTTON_REX,26,218,64,22
+    RTEXT           "数据量：",IDC_STATIC,310,188,33,8
+    RTEXT           "数据：",IDC_STATIC,274,35,25,8
+    CONTROL         "List1",IDC_LIST_TXX,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,308,50,82,132
+    GROUPBOX        "",IDC_STATIC,0,28,156,229
+    CTEXT           "WORD",IDC_STATIC,1,244,35,12,0,WS_EX_STATICEDGE
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    CONTROL         "List1",IDC_LIST2,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    CONTROL         "List1",IDC_LIST3,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    CONTROL         "List1",IDC_LIST4,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    CONTROL         "List1",IDC_LIST5,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    CONTROL         "List1",IDC_LIST6,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    CONTROL         "List1",IDC_LIST7,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    CONTROL         "List1",IDC_LIST8,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,33,148,182
+    GROUPBOX        "加载数据",IDC_STATIC,236,14,160,192
+    GROUPBOX        "发送数据",IDC_STATIC,232,0,236,258
+    CONTROL         "第0通道发送",IDC_CHECK_TX1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,58,60,10
+    CONTROL         "第1通道发送",IDC_CHECK_TX2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,72,60,10
+    CONTROL         "第2通道发送",IDC_CHECK_TX3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,86,60,10
+    CONTROL         "第3通道发送",IDC_CHECK_TX4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,100,60,10
+    CONTROL         "第4通道发送",IDC_CHECK_TX5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,114,60,10
+    CONTROL         "第5通道发送",IDC_CHECK_TX6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,129,60,10
+    CONTROL         "第6通道发送",IDC_CHECK_TX7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,143,60,10
+    CONTROL         "第7通道发送",IDC_CHECK_TX8,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,402,157,60,10
+    LTEXT           "",IDC_STATIC_DNUM2,37,244,117,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_DNUM3,37,244,117,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_DNUM4,37,244,117,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_DNUM5,37,244,117,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_DNUM6,37,244,117,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_DNUM7,37,244,117,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_DNUM8,37,244,117,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_DNUM9,37,244,117,12,0,WS_EX_STATICEDGE
+    GROUPBOX        "发送通道选择",IDC_STATIC,396,14,69,192,BS_CENTER
+    PUSHBUTTON      "停止定时发送",IDC_BUTTON_STOPTX,362,223,64,22
+    CONTROL         "使用中断",IDC_CHECK_REX,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,274,7,48,10
+    CONTROL         "中断",IDC_RADIO_INT,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,296,7,29,10
+    CONTROL         "查询",IDC_RADIO_INQURE,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,288,7,29,10
+    PUSHBUTTON      "全选",IDC_BUTTON_ALLSELECT,404,173,50,14
+    PUSHBUTTON      "全不选",IDC_BUTTON_NONESELECT,404,189,50,14
+    CONTROL         "429字格式转换使能",IDC_CHECK_TMIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,242,210,84,10
+    CONTROL         "保存数据",IDC_CHECK_SAVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,101,220,46,10
+    CONTROL         "实时显示",IDC_CHECK_VIEW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,101,231,48,10
+    GROUPBOX        "",IDC_STATIC,1,0,225,258
+    GROUPBOX        "接收使能",IDC_STATIC,159,7,64,123
+    CONTROL         "第0通道",IDC_CHECK_RXENABLE0,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,16,44,10
+    CONTROL         "第1通道",IDC_CHECK_RXENABLE1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,26,44,10
+    CONTROL         "第2通道",IDC_CHECK_RXENABLE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,36,44,10
+    CONTROL         "第3通道",IDC_CHECK_RXENABLE3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,46,44,10
+    CONTROL         "第4通道",IDC_CHECK_RXENABLE4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,56,44,10
+    CONTROL         "第5通道",IDC_CHECK_RXENABLE5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,66,44,10
+    CONTROL         "第6通道",IDC_CHECK_RXENABLE6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,76,44,10
+    CONTROL         "第7通道",IDC_CHECK_RXENABLE7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,86,44,10
+    PUSHBUTTON      "全选",IDC_BUTTON_RXENABLEALL,165,99,42,11
+    PUSHBUTTON      "全不选",IDC_BUTTON_RXENABLENONE,165,113,42,11
+    GROUPBOX        "复位使能",IDC_STATIC,159,133,64,123
+    CONTROL         "第0通道",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,143,44,10
+    CONTROL         "第1通道",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,153,44,10
+    CONTROL         "第2通道",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,163,44,10
+    CONTROL         "第3通道",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,173,44,10
+    CONTROL         "第4通道",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,183,44,10
+    CONTROL         "第5通道",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,193,44,10
+    CONTROL         "第6通道",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,203,44,10
+    CONTROL         "第7通道",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,213,44,10
+    PUSHBUTTON      "复位",IDC_BUTTON_RALL,167,233,42,13
+END
+
+IDD_BASEADDR DIALOG DISCARDABLE  0, 0, 183, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "板卡号选择"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,118,9,50,17
+    PUSHBUTTON      "取消",IDC_BTCANCEL,118,32,50,17
+    EDITTEXT        IDC_EDIT1,47,19,47,15,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "[0~7]",IDC_STATIC,59,37,28,9
+    RTEXT           "板卡号：",IDC_STATIC,13,23,33,8
+END
+
+IDD_INTRODUCE DIALOG DISCARDABLE  0, 0, 240, 158
+STYLE WS_POPUP | WS_BORDER
+FONT 10, "System"
+BEGIN
+    CONTROL         132,IDC_STATIC,"Static",SS_BITMAP,0,0,256,169
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 304, 284
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "基本设置"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,174,255,50,19
+    PUSHBUTTON      "取消",IDC_SETBCANCEL,232,255,50,19
+    CONTROL         "Tab1",IDC_TAB_TX,"SysTabControl32",0x0,7,7,294,105
+    CONTROL         "Tab1",IDC_TAB_RX,"SysTabControl32",0x0,10,139,293,109
+    COMBOBOX        IDC_COMBO_BR,37,47,65,90,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO_RXBR,37,182,65,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_JO,133,47,65,90,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO_TXBIT,37,88,65,77,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_RXBIT,37,220,65,81,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DEPTH,136,181,56,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "添加时标",IDC_CHECK_TIMETAG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,219,185,48,10
+    CONTROL         "429转换使能",IDC_CHECK_TRUE,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,219,49,60,10
+    GROUPBOX        "触发深度",IDC_STATIC,126,166,79,36
+    GROUPBOX        "波特率",IDC_STATIC,29,166,78,36
+    GROUPBOX        "数据长度",IDC_STATIC,29,204,78,36
+    GROUPBOX        "波特率",IDC_STATIC,29,32,78,36
+    GROUPBOX        "数据长度",IDC_STATIC,29,73,78,36
+    GROUPBOX        "校验位",IDC_STATIC,126,32,79,36
+    GROUPBOX        "接收通道",IDC_STATIC,4,128,300,125,BS_CENTER,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    GROUPBOX        "发送通道",IDC_STATIC,4,0,300,119,BS_CENTER,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "中断方式接收",IDC_RADIO_INTT,"Button",
+                    BS_AUTORADIOBUTTON,134,215,64,10
+    CONTROL         "查询方式接收",IDC_RADIO_INQU,"Button",
+                    BS_AUTORADIOBUTTON,134,227,64,10
+    CONTROL         "自环模式",IDC_RADIO_SELEF,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,192,7,48,10
+    CONTROL         "正常模式",IDC_RADIO_NOMA,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,226,7,48,10
+    CONTROL         "正常模式",IDC_RADIO_WORD1,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,222,7,48,10
+    CONTROL         "自环模式",IDC_RADIO_WORD2,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,205,7,48,10
+    GROUPBOX        "接收方式选择",IDC_STATIC,126,204,79,36,WS_GROUP
+    CONTROL         "正常模式",IDC_RADIO_WORK1,"Button",BS_AUTORADIOBUTTON,
+                    137,85,48,10
+    CONTROL         "自环模式",IDC_RADIO_WORK2,"Button",BS_AUTORADIOBUTTON,
+                    137,95,48,10
+    GROUPBOX        "工作模式选择",IDC_STATIC,126,73,79,36,WS_GROUP
+    CONTROL         "所有发送相同设置",IDC_CHECK_TXCONFIGTXALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,217,63,80,10
+    CONTROL         "所有接收相同设置",IDC_CHECK_TXCONFIGRXALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,219,203,80,10
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 297, 187
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "内/外触发设置"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,162,166,52,17
+    PUSHBUTTON      "取消",IDC_BTTCANCEL,230,166,52,17
+    CONTROL         "Tab1",IDC_TAB_PULSE,"SysTabControl32",0x0,0,0,297,161
+    EDITTEXT        IDC_EDIT_LPERIOD,109,33,58,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_LWORDDELAY,109,57,58,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_DELAYTIME,109,81,58,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_LTIME,109,105,58,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_TIMENUM,109,129,58,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "上升沿",IDC_CHECK_LENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,211,111,40,10
+    CONTROL         "下降沿",IDC_CHECK_WENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,211,126,40,10
+    CONTROL         "内触发使能",IDC_RADIO_UP,"Button",BS_AUTORADIOBUTTON,
+                    170,16,56,10
+    CONTROL         "外触发使能",IDC_RADIO_DOWN,"Button",BS_AUTORADIOBUTTON,
+                    173,17,56,10
+    GROUPBOX        "触发边沿选择",IDC_STATIC,198,95,76,48
+    RTEXT           "内触发半周期宽度：",IDC_STATIC,31,35,73,8
+    RTEXT           "触发字间间隔：",IDC_STATIC,47,60,57,8
+    RTEXT           "触发延迟时间：",IDC_STATIC,47,85,57,8
+    RTEXT           "定时发送次数：",IDC_STATIC,47,108,57,8
+    RTEXT           "定时发送数据量：",IDC_STATIC,39,132,65,8
+    CONTROL         "内触发使能",IDC_CHECK_IN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,211,63,56,10
+    CONTROL         "外触发使能",IDC_CHECK_EXT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,211,77,56,10
+    LTEXT           "50us",IDC_STATIC,169,36,17,8
+    LTEXT           "1us",IDC_STATIC,169,59,13,8
+    LTEXT           "1us",IDC_STATIC,169,83,13,8
+    LTEXT           " 注* 输出的内触发时钟\n     为50%占空比",IDC_STATIC,201,
+                    34,91,17
+    GROUPBOX        "",IDC_STATIC,198,25,96,30
+    CONTROL         "所有通道相同设置",IDC_CHECK_TRIGALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,211,149,80,10
+END
+
+IDD_DIALOG3 DIALOG DISCARDABLE  0, 0, 313, 291
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SD/标号过滤设置"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,166,263,50,18
+    PUSHBUTTON      "取消",IDC_BTSCANCEL,231,263,50,18
+    CONTROL         "Tab1",IDC_TAB_lable,"SysTabControl32",0x0,7,7,299,14
+    COMBOBOX        IDC_COMBO_SD,69,237,48,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "允许SD过滤",IDC_CHECK_SD,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,113,252,56,10
+    CONTROL         "允许SD和标号过滤",IDC_CHECK_LABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,176,239,80,10
+    RTEXT           "SD：",IDC_STATIC,51,241,17,8
+    CONTROL         "所有通道相同设置",IDC_CHECK_ADALLS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,176,252,80,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "AEC429-CPCI/PCI-S6 应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "AEC429-CPCI/PCI-S6\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2007 北京神州飞航科技有限责任公司\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "AEC429-CPCI/PCI-S6.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "AEC429-CPCI/PCI-S6 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 461
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+        HORZGUIDE, 33
+        HORZGUIDE, 215
+    END
+
+    IDD_BASEADDR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        VERTGUIDE, 118
+        VERTGUIDE, 168
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_INTRODUCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        VERTGUIDE, 29
+        VERTGUIDE, 107
+        VERTGUIDE, 126
+        VERTGUIDE, 186
+        VERTGUIDE, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 277
+        HORZGUIDE, 115
+        HORZGUIDE, 212
+        HORZGUIDE, 249
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+        HORZGUIDE, 161
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 306
+        VERTGUIDE, 14
+        VERTGUIDE, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 286
+        HORZGUIDE, 262
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "板卡设置(&A)"
+    BEGIN
+        MENUITEM "基本设置(&S)",                ID_MEMUWORD
+        MENUITEM "标号过滤设置(&D)",            ID_MEMUSD
+        MENUITEM "触发设置(&F)",                ID_MEMUPULSE
+    END
+    MENUITEM "",                            ID_MEMU2
+    MENUITEM "复位板卡",                    ID_MEMURESET
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 AEC429-CPCI/PCI-S6(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Dialg.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,116 @@
+;;BSTIOD48.inf
+
+;; *********  PLEASE READ ***********
+;; The wizard cannot create exact INF files for all buses and device types.
+;; You may have to make changes to this file in order to get your device to
+;; install. In particular, hardware IDs and logical configurations require
+;; intervention.
+;;
+;; The Windows DDK documentation contains an excellent INF reference.
+
+;--------- Version Section ---------------------------------------------------
+
+[Version]
+Signature="$CHICAGO$"
+Provider=%ProviderName%
+
+; If device fits one of the standard classes, use the name and GUID here,
+; otherwise create your own device class and GUID as this example shows.
+
+Class=Beijing Senfetech Corporation
+ClassGUID={884E8421-285E-4e30-B6D6-DA0C1DB4DE0D}
+
+;--------- SourceDiskNames and SourceDiskFiles Section -----------------------
+
+; These sections identify source disks and files for installation.  They are
+; shown here as an example, but commented out.
+
+;[SourceDisksNames]
+;1 = "Install Disk",Disk1,,
+
+;[SourceDisksFiles]
+;BSTIOD48.sys = 1,,
+BSTIOD48.sys = 1
+
+;--------- ClassInstall/ClassInstall32 Section -------------------------------
+
+; Not necessary if using a standard class
+
+; 9X Style
+[ClassInstall]
+Addreg=Class_AddReg
+
+; NT Style
+[ClassInstall32]
+Addreg=Class_AddReg
+
+[Class_AddReg]
+HKR,,,,%DeviceClassName%
+HKR,,EnumPropPages32,,"drivers\BSTICON.dll"
+HKR,,Icon,,"101"
+
+;--------- DestinationDirs Section -------------------------------------------
+
+[DestinationDirs]
+BSTDEV_Files_Driver = 10,System32\Drivers
+
+;--------- Manufacturer and Models Sections ----------------------------------
+
+[Manufacturer]
+%MfgName%=Mfg0
+
+[Mfg0]
+
+; PCI hardware IDs use the form
+;   PCI\VEN_aaaa&DEV_bbbb&SUBSYS_cccccccc&REV_dd
+;
+%DeviceDesc%=BSTDEV_DDI, PCI\VEN_1BA0&DEV_060F&SUBSYS_90544208
+
+;---------- DDInstall Sections -----------------------------------------------
+; --------- Windows 9X -----------------
+
+; Experimentation has shown that DDInstall root names greater than 19 characters
+; cause problems in Windows 98
+
+[BSTDEV_DDI]
+CopyFiles=BSTDEV_Files_Driver
+AddReg=BSTDEV_9X_AddReg
+
+[BSTDEV_9X_AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,BSTIOD48.sys
+HKR, "Parameters", "BreakOnEntry", 0x00010001, 0
+
+; --------- Windows NT -----------------
+
+[BSTDEV_DDI.NT]
+CopyFiles=BSTDEV_Files_Driver
+
+[BSTDEV_DDI.NT.Services]
+Addservice = BSTIOD48, 0x00000002, BSTDEV_AddService
+
+[BSTDEV_AddService]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\BSTIOD48.sys
+
+[BSTDEV_NT_AddReg]
+HKLM, "System\CurrentControlSet\Services\BSTIOD48\Parameters",\
+	"BreakOnEntry", 0x00010001, 0
+
+; --------- Files (common) -------------
+
+[BSTDEV_Files_Driver]
+BSTIOD48.sys
+BSTICON.dll,,,2
+
+;--------- Strings Section ---------------------------------------------------
+
+[Strings]
+ProviderName="Beijing Senfetech Corporation"
+MfgName="Beijing Senfetech Corporation"
+DeviceDesc="BST34208"
+DeviceClassName="Beijing Senfetech Corporation"
+SvcDesc="BSTIOD48"

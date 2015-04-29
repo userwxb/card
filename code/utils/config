@@ -1,0 +1,6 @@
+web : {
+            'browser': firefox,
+            'url'    : 'http://mail.163.com',
+            'id'      : userwxb@163.com,
+            'password' : qwe123456
+      }
