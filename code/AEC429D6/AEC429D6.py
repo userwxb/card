@@ -375,22 +375,162 @@ class AEC429D6(Base):
 
 
 if __name__ == "__main__":
-    CardId = 0
-    ChanNo = 0
+    cardid=0 
+    TRUE=1
+    FLASE=0
     card=AEC429D6("AEC429D6.dll")
-    retval,hAEC429D6 = card.AEC429D6_Open(CardId)
-    if retval <= 0:
-        print "Open Card: %d failure" % CardId
+    ##
+    retval,hDevce=card.AEC429D6_Open(cardid)
+    if retval < 1:
+        print "open hardware: %d failed" % retval
         exit(1)
-    card.AEC429D6_Reset(hAEC429D6)
-    cardtype = CARDTYPE_STRUCT()
-    card.AEC429D6_GetCardType(hAEC429D6,cardtype)
-    card.AEC429D6_GetCardSN(hAEC429D6)
+    ##
+    retval=card.AEC429D6_Reset(hDevce)
+    if retval < 1:
+        print "Reset card: %d failed" % retval
+        exit(1)
+    ##
+	CardType=CARDTYPE_STRUCT()
+    card.AEC429D6_GetCardType(hDevce,CardType)
+    ##
+    RxCfgWord=RXCFGWORD_STRUCT()
+    retval=card.AEC429D6_SetRxCfgWord(hDevce,RxCfgWord)
+    if retval < 1:
+        print "RX cfg word: %d failed" % retval
+        exit(1)    
+    ##
+    TxCfgWord=TXCFGWORD_STRUCT()
+    retval=card.AEC429D6_SetTxCfgWord(hDevce,TxCfgWord)
+    if retval < 1:
+        print "TX cfg word: %d failed" % retval
+        exit(1)        
+    ##
+    retval=card.AEC429D6_GetCardSN(hDevce)
+    ##
+    retval=card.AEC429D6_ResetRxFIFO(hDevce,1)
+    if retval < 1:
+        print "CH 1 Reset RX FIFO %d failed" % retval
+        exit(1) 
+    ##
+    retval=card.AEC429D6_ResetTxFIFO(hDevce,1)
+    if retval < 1:
+        print "CH 1 Reset TX FIFO %d failed" % retval
+        exit(1) 
+    ##
+    card.AEC429D6_SetIntMaskReg(hDevce,TRUE)
+    ##
+    card.AEC429D6_RxLen(hDevce,1)
+    ##
+    card.AEC429D6_TxLen(hDevce,1)
+    ##
+    card.AEC429D6_WordConvertEn(hDevce,TRUE)
+    ##
+    retval=card.AEC429D6_Rx_Start(hDevce,1,TRUE)
+    if retval < 1:
+        print "Start RX channel enable %d failed" % retval
+        exit(1)     
+    ##
+    retval=card.AEC429D6_TxStart(hDevce,1,TRUE)
+    if retval < 1:
+        print "Start TX channel enable %d failed" % retval
+        exit(1)
+    ##
+    card.AEC429D6_TxFIFOSTR(hDevce,1)
+    ##
+    card.AEC429D6_RxFIFOSTR(hDevce,1)
+    ##
+    card.AEC429D6_SetEvent(hDevce,0x12345678)
+    ##    
+    retval=card.AEC429D6_SetTriggerDepth(hDevce,1,2)
+    if retval < 1:
+        print "Set RX Trigger Depth %d failed" % retval
+        exit(1)
+    ##    
+    retval=card.AEC429D6_AddTimeTag(hDevce,1,TRUE)
+    if retval < 1:
+        print "Set timer tag %d failed" % retval
+        exit(1)
+    ##
+    system_time=SYSTEMTIME()
+    card.AEC429D6_StartTimeTag(hDevce,TRUE,system_time)
+    ##
+    # SdLable=[[0 for col in range(256)] for row in range(4)]
+    data=[[col for col in range(256)] for row in range(4)]
+    SdLable=((c_byte*256)*4)((c_byte*256)(*(data[0]) ),(c_byte*256)(*(data[1]) ),(c_byte*256)(*(data[2]) ),(c_byte*256)(*(data[3]) ) )
+    # or
+    # SdLable = ((c_byte*256)*4)( (0),(0),(0),(0))
+    retval=card.AEC429D6_SetLabelFilter(hDevce, i, SdLable)
+    if retval < 1:
+        print "Set timer tag %d failed" % retval
+        exit(1)
+    ##
+    retval=card.AEC429D6_StartLabelFilter(hDevce,1,TRUE)
+    if retval < 1:
+        print "Start Label Filter %d failed" % retval
+        exit(1)
+    ##
+    retval=card.AEC429D6_EnableTimerMode(hDevce,1,TRUE)
+    if retval < 1:
+        print "Enable timer to send %d failed" % retval
+        exit(1)
 
+    ##
+    retval=card.AEC429D6_InnerTriggerEnable(hDevce,1,TRUE)
+    if retval < 1:
+        print "Enable Inner trigger %d failed" % retval
+        exit(1)
 
+    ##
+    retval=card.AEC429D6_SetInnerTriggerPeriod(hDevce,1,30)
+    if retval < 1:
+        print "Enable Inner trigger period %d failed" % retval
+        exit(1)
 
+    ##
+    retval=card.AEC429D6_ExternalTriggerEnable(hDevce,1,FLASE)
+    if retval < 1:
+        print "Enable External trigger period %d failed" % retval
+        exit(1)
 
+    ##
+    retval=card.AEC429D6_SetDelayTime(hDevce,1,234)
+    if retval < 1:
+        print "set inner/exter trigger delay %d failed" % retval
+        exit(1)
 
+    ##
+    retval=card.AEC429D6_SetTriggerLevel(hDevce,1,0,1)
+    if retval < 1:
+        print "set inner/exter trigger level type %d failed" % retval
+        exit(1)
+
+    ##
+    retval=card.AEC429D6_SetWordInterval(hDevce,1,23)
+    if retval < 1:
+        print "set inner/exter trigger interval time %d failed" % retval
+        exit(1)
+
+    ##
+    retval=card.AEC429D6_NumToSend(hDevce,1,20)
+    if retval < 1:
+        print "set inner/exter trigger send times %d failed" % retval
+        exit(1)
+    ##
+    retval=card.AEC429D6_TriggerCnt(hDevce,1,200)
+    if retval < 1:
+        print "set inner/exter trigger send data number in total %d failed" % retval
+        exit(1)
+    ##
+    # Rx_Buf=[0]*256
+    Rx_Buf=(c_ulong*256)(0)
+    retval=card.AEC429D6_RxRead(hDevce,1,256,Rx_Buf)
+    ##   
+    # Tx_Buf=[0]*256
+    Tx_Buf=(c_ulong*256)(0)
+    retval=card.AEC429D6_TxWrite(hDevce,1,256,Tx_Buf)
+    ##
+    card.AEC429D6_Close(hDevce)
+    
     print "Test Done"
 
 

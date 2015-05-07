@@ -37,6 +37,19 @@ class udisk(Base):
                         topath=os.path.join(todir,filename)
                         self.log.debug("from :%s copy file to: %s" % (frompath,topath))
                         shutil.copyfile(frompath,topath)
+    def readfile(self,name):
+        self.find_udisk()
+        context=''
+        for fromdir in self.volumn:
+            for root,dirs,files in os.walk(fromdir):
+                for filename in files:
+                    if filename == name:
+                        fullpath=os.path.join(root,filename)
+                        with open(fullpath,"rU") as fp:
+                            context=fp.read()
+                        return context
+        return None
+
 
 if __name__ == '__main__':
     ud = udisk("udisk.dll")
